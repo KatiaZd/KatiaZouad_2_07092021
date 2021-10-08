@@ -1,12 +1,136 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservia</title>
-</head>
-<body>
-    
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/3bc7bd08b7.js" crossorigin="anonymous"></script>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./style.css" rel="stylesheet">
+        <title>Reservia</title>
+    </head>
+
+    <body>
+        <header>
+            <!-- NAVBAR -->
+            <nav>
+                <img id="logo" src="images/logo/Reservia@3x.png" alt="LogoReservia">
+                <a href="">Hébergements</a>
+                <a href="">Activités</a>
+                <a id="sinscrire" href="">S'inscrire</a>
+            </nav>
+        </header>
+
+        <!-- BARRE DE RECHERCHES -->
+        <main class="wrapper">
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <p>En plein centre ville ou en pleine nature</p>
+        
+            <div class="recherche">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" placeholder="Marseille, France">
+                <button>Rechercher</button>
+            </div>
+        </main>
+
+        <!-- FILTRES -->
+        <div class="listeFiltres">
+            <h2>Filtres</h2>
+            <div class="filtres">
+                <i class="fas fa-money-bill-wave"></i> <!-- icône économique-->
+                <span>Économique</span>
+            </div>
+            <div class="filtres">
+                <i class="fas fa-solid fa-child"></i> <!-- icône familial-->
+                <span>Familial</span>
+            </div>
+            <div class="filtres">
+                <i class="fas fa-solid fa-heart"></i> <!-- icône romantique-->
+                <span>Romantique</span>
+            </div>
+            <div class="filtres">
+                <i class="fas fa-solid fa-dog"></i> <!-- icône animaux-->
+                <span>Animaux autorisés</span>
+            </div>
+        </div>
+
+        <!-- MESSAGE i -->
+
+        <div class="information">
+            <i class="fas fa-info"></i>
+            <p>Plus de 500 logements sont disponibles dans cette ville</p>
+        </div>
+
+        <!--HEBERGEMENTS -->
+        
+        <div class="hebergements">
+            <div class="hebergementsMarseille"></div>
+            <h2>Hébergements à Marseille</h2>
+
+            <div class="populaire"></div>
+            <h2>Les plus populaires</h2>
+        </div>
+
+        <!-- ACTIVITES -->
+
+        <section class="activites">
+            <h2>Activités à Marseille</h2>
+            <div class="blocActivites">
+                <div class="imgVieuxPort">
+
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+<!-- FOOTER -->
+        <footer>
+            <div class="footer">
+                <div class="bloc1">
+                    <h3>A propos</h3>
+                        <ul class="listeBloc">
+                            <li><a href="#">Fonctionnement du site</a></li>
+                            <li><a href="#">Conditions générales de vente</a></li>
+                            <li><a href="#">Données et confidentialité</a></li>
+                        </ul>
+                </div>
+
+                <div class="bloc2">
+                    <h3>Nos hébergements</h3>
+                    <ul class="listeBloc">
+                        <li><a href="#">Charte qualité</a></li>
+                        <li><a href="#">Soumettre votre hôtel</a></li>
+                    </ul>
+                </div>
+
+                <div class="bloc3">
+                    <h3>Assistance</h3>
+                        <ul class="listeBloc">
+                            <li><a href="#">Centre d'aide</a></li>
+                            <li><a href="#">Nous contacter</a></li>
+                        </ul>
+                </div>
+            </div> <!--Fermeture div principale-->
+        </footer>
+    </body>
 </html>

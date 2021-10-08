@@ -1,0 +1,182 @@
+/* GENERAL */
+*{
+
+    box-sizing: border-box;
+    font-family: 'Raleway', 'sans-serif';
+}
+
+
+/* NAVBAR */
+a{
+    color: inherit;
+    text-decoration: none;
+}
+nav{    
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;  /* RESPONSIVE, la nav, en fonction de l'écran se met en bas */
+    max-width: 1400px
+}
+nav a{
+    padding: 2rem;
+}
+nav a:hover{    /* Animation CSS */
+    border-top: 3px solid #0065fc ;
+}
+
+#logo{
+    padding: 0 2rem;
+    margin-right: auto;
+    width: 100px; 
+}
+
+#sinscrire{
+    font-weight: bold;
+    color: #0065fc;
+}
+
+/* BARRE DE RECHERCHE */
+.wrapper{
+    padding: 0 1rem;
+}
+
+.recherche{
+    display: flex;
+    max-width: 1400px
+}
+
+.recherche i{
+    background-color: #F2F2F2;
+    padding: 1rem;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.recherche *{
+    padding: 1rem 1.5rem;
+}
+
+.recherche input::placeholder{
+    color: black;
+    font-weight: bold;
+}
+
+.recherche input{
+    padding-right: 5rem;
+    padding-right: 2,5rem;
+    border: 1px solid #F2F2F2;
+}
+
+.recherche button{
+   background-color: #0065fc;
+   color: white;
+   font-weight: bold;
+   font-size: 1.2rem; 
+   border-radius: 0 1rem 1rem 0 ;
+   padding: 1rem;
+   border: none;  
+}
+
+
+/* FILTRES */
+
+.listeFiltres{
+    display: flex;
+    align-items: center;
+}
+
+.fas{       /* Icônes */
+    color: blue;
+    background-color: #deedff;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.filtres{
+    border: 1px solid #F2F2F2;
+    border-radius: 2rem;
+}
+
+
+
+.filtres span{
+    font-weight: bold;
+    padding: 1rem;
+
+}
+
+/* MESSAGE I */
+
+.information{
+    display: flex;
+    
+}
+
+/* HEBERGEMENTS */
+
+.hebergements{
+    border: 1px solid black;
+    background-color: #F2F2F2;
+}
+
+
+.hebergementsMarseille{
+    display: flex;
+    background-color: blue;
+}
+
+.populaire{
+    display: flex;
+}
+
+/* ACTIVITES */
+
+.activites{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+
+}
+
+.blocActivites{
+    border-radius: 15px;
+    background-color: #F2F2F2;
+    width: 100%;
+    height: 500px;
+
+}
+
+
+
+
+
+
+
+
+/*FOOTER*/
+
+footer{
+    width: 100%;
+    background-color: #F2F2F2 ;
+
+} 
+
+.footer{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-size: 15px;
+    max-width: 1400px;
+}
+
+.listeBloc{
+    list-style-type: none;
+    padding: 5px;
+    line-height: 2em; /* Espacement des inter-lignes */
+}
+
+
+
+
+
