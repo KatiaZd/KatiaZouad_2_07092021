@@ -1,10 +1,12 @@
 /* GENERAL */
 *{
 
-    box-sizing: border-box;
     font-family: 'Raleway', 'sans-serif';
 }
 
+body{
+    margin: 0;
+}
 
 /* NAVBAR */
 a{
@@ -15,14 +17,15 @@ nav{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    flex-wrap: wrap;  /* RESPONSIVE, la nav, en fonction de l'écran se met en bas */
+    flex-wrap: wrap;   /*RESPONSIVE, la nav, en fonction de l'écran se met en bas */
     max-width: 1400px
 }
 nav a{
     padding: 2rem;
+    border-top: 3px solid transparent;
 }
 nav a:hover{    /* Animation CSS */
-    border-top: 3px solid #0065fc ;
+    border-top-color: #0065fc ;
 }
 
 #logo{
@@ -36,24 +39,55 @@ nav a:hover{    /* Animation CSS */
     color: #0065fc;
 }
 
-/* BARRE DE RECHERCHE */
+.navResponsive{
+    display: flex;
+}
+
+.navResponsive a:hover{
+    color: #0065fc;
+}
+
+
+/* RESPONSIVE NAVBAR */
+@media (max-width: 768px){
+   .navResponsive{
+       order: 1;
+       flex-basis: 100%;
+   }
+
+   .navResponsive a{
+       flex-basis: 50%;
+       text-align: center;
+       border-bottom: 3px solid #F2F2F2;
+   }
+
+   .navResponsive a:hover{
+       border-bottom-color: #0065fc;
+       border-top-color: transparent;
+   }
+        
+    }
+
+/* BARRE DE RECHERCHES */
 .wrapper{
-    padding: 0 1rem;
+    padding: 0 35px;
 }
 
 .recherche{
     display: flex;
-    max-width: 1400px
+    margin-bottom: 20px;    /* A la place des br */
+    /*max-width: 1400px*/
 }
 
 .recherche i{
     background-color: #F2F2F2;
-    padding: 1rem;
-    border-radius: 1rem 0 0 1rem;
+    padding: 15px;
+    border-radius: 10px 0 0 10px;
 }
 
 .recherche *{
-    padding: 1rem 1.5rem;
+    padding: 15px 20px;
+    font-size: 15px; 
 }
 
 .recherche input::placeholder{
@@ -62,46 +96,76 @@ nav a:hover{    /* Animation CSS */
 }
 
 .recherche input{
-    padding-right: 5rem;
-    padding-right: 2,5rem;
+    padding-right: 50px;
     border: 1px solid #F2F2F2;
 }
 
-.recherche button{
+.recherche button {
    background-color: #0065fc;
    color: white;
    font-weight: bold;
-   font-size: 1.2rem; 
-   border-radius: 0 1rem 1rem 0 ;
-   padding: 1rem;
+   border-radius: 0 10px 10px 0;
+   padding: 15px;
    border: none;  
+   cursor: pointer;
 }
 
+.fas.fa-map-marker-alt{
+    color: black;
+}
+.fas.fa-search{
+    display: none;
+}
+
+/* RESPONSIVE RECHERCHE */
+
+@media (max-width: 768px){
+    .iconeResponsive{
+      display: none;
+    }
+
+    .fas.fa-search{
+      display: inline;
+      background-color: #0065fc;
+      color: white;
+    }
+
+    .recherche button{
+        border-radius: 10px;
+    }
+
+}
 
 /* FILTRES */
 
 .listeFiltres{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
 }
 
 .fas{       /* Icônes */
-    color: blue;
-    background-color: #deedff;
-    padding: 1rem;
+    color: #0065fc;
+    background-color: #deebff;
+    padding: 10px;
     border-radius: 50%;
+    margin: -2px;
 }
 
 .filtres{
-    border: 1px solid #F2F2F2;
-    border-radius: 2rem;
+    border: 2px solid #F2F2F2;
+    border-radius: 20px;
 }
 
-
+.filtres:hover{
+    cursor: pointer;
+    background-color: #deebff;
+}
 
 .filtres span{
     font-weight: bold;
-    padding: 1rem;
+    padding: 10px;
 
 }
 
@@ -109,25 +173,132 @@ nav a:hover{    /* Animation CSS */
 
 .information{
     display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
     
 }
+
+.information .fas{
+    color: #0065fc;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    border: 2px solid #F2F2F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
 
 /* HEBERGEMENTS */
 
 .hebergements{
-    border: 1px solid black;
+    display: flex;
+    padding: 15px;
+    column-gap: 20px;
+
+}
+
+.hebergements > div{
+    border-radius: 15px;
+    padding: 15px;   
+}
+
+.hebergements .hebergementsMarseille{
     background-color: #F2F2F2;
+    flex-basis: 66%;
+  
 }
 
-
-.hebergementsMarseille{
+/* HEBERGEMENTS - listeAppart */
+.listeAppart1 .listeAppart2{
     display: flex;
-    background-color: blue;
+    flex-wrap:wrap;
+    
+    
 }
 
-.populaire{
-    display: flex;
+
+.listeAppart1 div{
+    border: 1px solid green;
+    flex-wrap: wrap; 
+    
+    
 }
+
+.listeAppart2 div{
+    border: 1px solid blue;
+    flex-wrap: wrap; 
+    
+}
+
+
+.hebergementsMarseille p{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* POPULAIRES */
+
+.hebergements .populaire{
+    flex-basis: 33%;
+    background-color: #F2F2F2; 
+  
+    
+}
+
+.populaire div{
+    border: 1px solid pink;
+    display: flex;
+    flex-direction: column;
+    column-gap: 20px;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+/* HEBERGEMENTS RESPONSIVE */
+
+@media (max-width: 768px){
+   .hebergements{
+        flex-direction: column;
+    }
+
+    .hebergements .hebergementsMarseille{
+        order: 1;
+        
+    }
+
+    .populaire div{
+        flex-direction: column;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ACTIVITES */
 
@@ -139,11 +310,13 @@ nav a:hover{    /* Animation CSS */
 }
 
 .blocActivites{
-    border-radius: 15px;
-    background-color: #F2F2F2;
-    width: 100%;
-    height: 500px;
+    display: grid;
+    grid-template-columns: auto;
 
+}
+
+.blocActivites div{
+    border: 1px solid red;
 }
 
 
@@ -176,7 +349,9 @@ footer{
     line-height: 2em; /* Espacement des inter-lignes */
 }
 
+/* RESPONSIVE FOOTER */
 
-
-
-
+@media (max-width: 768px){
+    .footer{
+        flex-direction: column;
+    }
