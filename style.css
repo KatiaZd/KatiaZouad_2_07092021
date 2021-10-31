@@ -2,7 +2,7 @@
 *{
 
     font-family: 'Raleway', 'sans-serif';
-}
+  }
 
 body{
     margin: 0;
@@ -29,7 +29,7 @@ nav a:hover{    /* Animation CSS */
 }
 
 #logo{
-    padding: 0 2rem;
+    padding: 0 30px;
     margin-right: auto;
     width: 100px; 
 }
@@ -64,29 +64,31 @@ nav a:hover{    /* Animation CSS */
    .navResponsive a:hover{
        border-bottom-color: #0065fc;
        border-top-color: transparent;
-   }
-        
+   }   
     }
+    
 
 /* BARRE DE RECHERCHES */
 .wrapper{
     padding: 0 35px;
+    max-width: 1400px
+    
 }
 
 .recherche{
     display: flex;
-    margin-bottom: 20px;    /* A la place des br */
-    /*max-width: 1400px*/
+    margin-bottom: 20px;    /* A la place des br */ 
 }
 
 .recherche i{
     background-color: #F2F2F2;
     padding: 15px;
     border-radius: 10px 0 0 10px;
+    margin: 0;
 }
 
 .recherche *{
-    padding: 15px 20px;
+    padding: 10px 15px;
     font-size: 15px; 
 }
 
@@ -97,7 +99,7 @@ nav a:hover{    /* Animation CSS */
 
 .recherche input{
     padding-right: 50px;
-    border: 1px solid #F2F2F2;
+    border: 1px solid #F2F2F2;  
 }
 
 .recherche button {
@@ -105,21 +107,24 @@ nav a:hover{    /* Animation CSS */
    color: white;
    font-weight: bold;
    border-radius: 0 10px 10px 0;
-   padding: 15px;
+   padding: 0px;
    border: none;  
    cursor: pointer;
 }
 
-.fas.fa-map-marker-alt{
-    color: black;
-}
-.fas.fa-search{
+.fas.fa-search{                                 /*Icone de la maps, à voir le décallage du margin (était de -2px, cible le filtres)*/
     display: none;
+    margin: 5px;
 }
+
 
 /* RESPONSIVE RECHERCHE */
 
 @media (max-width: 768px){
+
+    .recherche input{
+      width: 100%;
+    }
     .iconeResponsive{
       display: none;
     }
@@ -128,13 +133,14 @@ nav a:hover{    /* Animation CSS */
       display: inline;
       background-color: #0065fc;
       color: white;
+      background: none;
     }
 
     .recherche button{
-        border-radius: 10px;
+        border-radius: 0 10px 10px 0;
     }
-
 }
+
 
 /* FILTRES */
 
@@ -145,7 +151,7 @@ nav a:hover{    /* Animation CSS */
     column-gap: 20px;
 }
 
-.fas{       /* Icônes */
+.listeFiltres .fas{       /* Icônes */
     color: #0065fc;
     background-color: #deebff;
     padding: 10px;
@@ -169,6 +175,15 @@ nav a:hover{    /* Animation CSS */
 
 }
 
+
+@media (max-width: 768px) {
+  .filtres{
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  } 
+}
+
+
 /* MESSAGE I */
 
 .information{
@@ -176,7 +191,6 @@ nav a:hover{    /* Animation CSS */
     align-items: center;
     margin-top: 5px;
     margin-bottom: 15px;
-    
 }
 
 .information .fas{
@@ -196,142 +210,268 @@ nav a:hover{    /* Animation CSS */
 /* HEBERGEMENTS */
 
 .hebergements{
-    display: flex;
-    padding: 15px;
-    column-gap: 20px;
-
+  display: flex;
+  gap: 50px;
 }
 
 .hebergements > div{
-    border-radius: 15px;
-    padding: 15px;   
+  background-color: #F2F2F2; 
+  padding: 15px;
+  border-radius: 20px;
 }
 
-.hebergements .hebergementsMarseille{
-    background-color: #F2F2F2;
-    flex-basis: 66%;
-  
+.hebergements .heberg{
+  flex: 66%;
 }
-
-/* HEBERGEMENTS - listeAppart */
-.listeAppart1 .listeAppart2{
-    display: flex;
-    flex-wrap:wrap;
-    
-    
-}
-
-
-.listeAppart1 div{
-    border: 1px solid green;
-    flex-wrap: wrap; 
-    
-    
-}
-
-.listeAppart2 div{
-    border: 1px solid blue;
-    flex-wrap: wrap; 
-    
-}
-
-
-.hebergementsMarseille p{
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* POPULAIRES */
 
 .hebergements .populaire{
-    flex-basis: 33%;
-    background-color: #F2F2F2; 
-  
-    
+  flex: 33%;
 }
 
-.populaire div{
-    border: 1px solid pink;
+.hebergements .heberg a{
+  font-weight: bold;
+  margin-bottom: 50px;
+
+}
+
+.appartCarte:hover{
+  transform: scale(1.01);
+}
+
+  /*listAppart*/
+
+  .listAppart{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;          /*jouer*/
+    justify-content: space-around;
+    margin-bottom: 50px;
+  }
+
+  .listAppart div{ 
+    flex-basis: 30%;   /*jouer*/
+  }
+
+ /*appartCarte*/
+
+ .appartCarte{
+  border-radius: 15px;
+  background-color: white;
+  padding: 4px;
+  box-shadow: 0 3px 5px grey;
+  flex-grow: 1;
+}
+
+.appartCarte img{
+  border-radius: 15px 15px 0 0;
+  height: 160px;
+  width: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+
+.appartCarte p, .appartCarte h3{
+  margin: 5px;
+}
+
+/* Etoiles */
+
+.stars{
+  margin: 5px;
+}
+.fas.fa-star.bleu{
+  color: #0065fc;
+}
+.gris{
+  color: #F2F2F2;
+}
+
+  /*Populaire*/
+
+.iconeFleche{
+  display: flex;
+  justify-content: space-between;
+}
+
+  .hebergements .listPopulaire{
     display: flex;
     flex-direction: column;
-    column-gap: 20px;
+    row-gap: 50px; 
+  }
+ .listPopulaire{
+   overflow: hidden;
+ }
+ 
+
+  .hebergementPopulaire{
+    border-radius: 20px;
+    box-shadow: 0 3px 5px grey;
+    min-width: 350px;
+  }
+
+  .appartPopulaire{
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    padding: 4px;
+  }
+
+  .appartPopulaire img{
+    height: 120px;
+    width: 80%;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px; 
+  }
+
+  .descriptionPopulaire{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    padding-left: 10px;
+  }
+
+  .descriptionPopulaire h3,.descriptionPopulaire p{
+    margin: 5px;
+  }
+
+  .starsPop{                  
+    margin-top: 30px;
+    padding-left: 5px;  
+  }
+
+  .starsPop2{
+    margin-top: 20px;
+    padding-left: 5px;
+  }
+
+  .appartPopulaire:hover{
+    transform: scale(1.01);
+  }
+
+
+  @media (max-width: 1100px){
+    
+    .listAppart{
+      flex-direction: column;
+    }
+    .appartCarte img{
+      object-position: bottom;
+    }
+    .listPopulaire{
+      flex-direction: column;
+    }
    
-}
+  }
 
-
-
-
-
-
-
-
-
-
-
-/* HEBERGEMENTS RESPONSIVE */
-
-@media (max-width: 768px){
-   .hebergements{
-        flex-direction: column;
+  @media (max-width: 1100px){
+    .hebergements{
+      flex-direction: column;
+    }
+    .populaire{
+      order: -1;
     }
 
-    .hebergements .hebergementsMarseille{
-        order: 1;
-        
+  }
+
+  @media (max-width: 768px){
+    .hebergements .heberg{
+      background-color: transparent;
     }
 
-    .populaire div{
-        flex-direction: column;
-        
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  }
+  
 /* ACTIVITES */
 
 .activites{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    
-
-}
-
-.blocActivites{
     display: grid;
-    grid-template-columns: auto;
+    column-gap: 15px;
+    margin: 60px 0;
+  }
 
-}
+  .activitesTitre{ 
+    grid-column: 1/-1;
+  }
 
-.blocActivites div{
-    border: 1px solid red;
-}
+  .activitesCarte{
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px #F2F2F2;
+  
+  }
+  
+  .activitesCarte:hover{
+    transform: scale(1.01);
+  }
+  .activitesImages{
+    position: relative;
+    flex: 1;
+  }
 
+  .activitesPhotos{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 
+  .activitesTitreImages {
+    margin: 15px 20px;
+  }
+  
+  @media (min-width: 1100px) {
+    .activites {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
+    }
+    .activitesCarte1 {  /*Vieux Port*/
+      grid-row: 2/7;
+      grid-column: 1/2;
+    }
+    .activitesCarte2 {   /*Fort de Pomègues*/
+      grid-column: 2/3;
+      grid-row: 2/5;
+    }
+    .activitesCarte3 {   /*Les Calanques*/
+      grid-column: 3/4;
+      grid-row: 2/7;
+    }
+    .activitesCarte4 {   /*Notre Dame de la Garde*/
+      grid-column: 4/5;
+      grid-row: 2/3;
+    }
+    .activitesCarte5 {   /*Iles du Frioul*/
+      grid-column: 2/3;
+      grid-row: 6/7;
+    }
+    .activitesCarte6 {   /*Parc Lonchamp*/
+      grid-column: 4/5;
+      grid-row: 4/7;
+    }
+  }
+  
+  @media (max-width: 1100px) {
+    .activites {
+      row-gap: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto 12rem 12rem;
+    }
+  }
 
-
-
-
-
+  @media (max-width: 768px) {
+    .activites {
+      row-gap: 2rem;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 12rem 12rem 12rem 12rem 12rem 12rem;
+    }
+  }
 
 /*FOOTER*/
 
 footer{
     width: 100%;
     background-color: #F2F2F2 ;
-
 } 
 
 .footer{
@@ -351,7 +491,9 @@ footer{
 
 /* RESPONSIVE FOOTER */
 
-@media (max-width: 768px){
-    .footer{
-        flex-direction: column;
-    }
+@media (max-width: 768px) {
+  .footer{
+    flex-direction: column;
+    padding: 30px;
+  }
+}
