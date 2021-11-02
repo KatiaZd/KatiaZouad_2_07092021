@@ -1,11 +1,12 @@
 /* GENERAL */
 *{
-
     font-family: 'Raleway', 'sans-serif';
   }
 
 body{
-    margin: 0;
+    max-width: 1440px;
+    margin:  auto;
+    
 }
 
 /* NAVBAR */
@@ -19,6 +20,7 @@ nav{
     justify-content: flex-end;
     flex-wrap: wrap;   /*RESPONSIVE, la nav, en fonction de l'écran se met en bas */
     max-width: 1400px
+    
 }
 nav a{
     padding: 2rem;
@@ -301,12 +303,11 @@ nav a:hover{    /* Animation CSS */
  .listPopulaire{
    overflow: hidden;
  }
- 
 
-  .hebergementPopulaire{
-    border-radius: 20px;
+  .hebergementPop{
     box-shadow: 0 3px 5px grey;
-    min-width: 350px;
+    border-radius: 20px;
+    margin: 3px;
   }
 
   .appartPopulaire{
@@ -327,7 +328,7 @@ nav a:hover{    /* Animation CSS */
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
-    padding-left: 10px;
+    padding-left: 5px;
   }
 
   .descriptionPopulaire h3,.descriptionPopulaire p{
@@ -470,8 +471,9 @@ nav a:hover{    /* Animation CSS */
 /*FOOTER*/
 
 footer{
-    width: 100%;
+    
     background-color: #F2F2F2 ;
+    width: 100%;
 } 
 
 .footer{
@@ -480,7 +482,7 @@ footer{
     justify-content: space-around;
     align-items: flex-start;
     font-size: 15px;
-    max-width: 1400px;
+    
 }
 
 .listeBloc{
