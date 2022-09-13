@@ -1,6 +1,6 @@
 <h1>Projet Reservia</h1>
 
-Projet "Transformer une maquette en site web avec HTML5 & CSS3" d'OCR
+"Transformer une maquette en site web avec HTML5 & CSS3" d'OCR
 
 <h2>Cahier des charges</h2>
 
