@@ -1,6 +1,6 @@
 <h1>Projet Reservia</h1>
 
-Projet 2 "Transformer une maquette en site web avec HTML5 & CSS3" du parcours "Développeur d'application - JavaScript React" d'OCR
+"Transformer une maquette en site web avec HTML5 & CSS3" d'OCR
 
 <h2>Cahier des charges</h2>
 
